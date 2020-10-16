@@ -1,6 +1,6 @@
 <div id="disqus-container">
     {{ with .Site.DisqusShortname }}
-      <button id="disqus-button" onclick="showComments()">Show comments</button>
+      <button id="disqus-button" onclick="showComments()">If you find something wrong or need a comment, click here.</button>
       <div id="disqus-comments">
         {{ $isDummyName := eq . "yourdiscussshortname" }}
         {{ $isServer := $.Site.IsServer }}
