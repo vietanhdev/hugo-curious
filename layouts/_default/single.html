@@ -24,6 +24,7 @@
     {{ if and ( ne .Site.Params.comment false ) ( ne .Params.comment false ) }}
       {{ partial "comments" . }}
     {{ end }}
+    {{ partial "related-posts" . }}
   </article>
 
 </div>
