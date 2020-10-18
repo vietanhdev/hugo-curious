@@ -20,10 +20,10 @@
     <div class="js-toc-content">
     {{- .Content }}
     </div>
+    {{ if eq .Type "posts" }}
     {{ if and ( ne .Site.Params.comment false ) ( ne .Params.comment false ) }}
       {{ partial "comments" . }}
     {{ end }}
-    {{ if eq .Type "post" }}
     {{ partial "related-posts" . }}
     {{ end }}
   </article>

@@ -1,4 +1,4 @@
-{{ $related := (where (.Site.RegularPages.Related .) "Type" "post") | first 5 }}
+{{ $related := (where (.Site.RegularPages.Related .) "Type" "posts") | first 5 }}
 {{ with $related }}
 <h3>Related Posts</h3>
 <ul>
