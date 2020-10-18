@@ -7,7 +7,8 @@
 {{- end }}
 {{- $image := $scratch.Get "image" }}
 {{- $bg := (path.Join "images" $image | absLangURL) }}
-<div class="wrap content">
+
+<div class="{{ if .Params.toc }}grid-inverse{{ end }} wrap content">
   <article class="post_content">
     {{- partial "i18nlist" . }}
     <h1 class="post_title">{{ .Title }}</h1>
@@ -16,11 +17,9 @@
     {{ with .Params.featureImage }}
     <img src="{{ . }}" class="image_featured">
     {{ end }}
-    {{ if .Params.toc }}
-    <!-- <h2>Overview</h2> -->
-    {{ .TableOfContents }}
-    {{ end }}
+    <div class="js-toc-content">
     {{- .Content }}
+    </div>
     {{ if and ( ne .Site.Params.comment false ) ( ne .Params.comment false ) }}
       {{ partial "comments" . }}
     {{ end }}
@@ -28,6 +27,20 @@
     {{ partial "related-posts" . }}
     {{ end }}
   </article>
+
+  {{ if .Params.toc }}
+  <aside class="sidebar">
+    <section class="sidebar_inner">
+      
+      <div class="sticky-toc">
+        <h3>Table of Contents</h3>
+        <div class="js-toc"></div>
+      </div>
+      
+      <!-- {{ .TableOfContents }} -->
+    </section>
+  </aside>
+  {{ end }}
 
 </div>
 {{- end }}
