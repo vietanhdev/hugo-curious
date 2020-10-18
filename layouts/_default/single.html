@@ -8,7 +8,7 @@
 {{- $image := $scratch.Get "image" }}
 {{- $bg := (path.Join "images" $image | absLangURL) }}
 
-<div class="{{ if .Params.toc }}grid-inverse{{ end }} wrap content">
+<div class="{{ if .Params.toc }}grid-inverse{{- else }}centerize-div{{ end }} wrap content">
   <article class="post_content">
     {{- partial "i18nlist" . }}
     <h1 class="post_title">{{ .Title }}</h1>
