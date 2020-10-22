@@ -22,8 +22,3 @@
 {{- partial "opengraph" . }}
 {{- partial "favicon" . }}
 <link rel="canonical" href="{{ .Permalink }}">
-
-
-{{- if isset .Params "math" }}
-<script>window.enableMath = {{.Params.math}};</script>
-{{- end }}
