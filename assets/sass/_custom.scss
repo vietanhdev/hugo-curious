@@ -1,0 +1,9 @@
+// add custom sass in this file
+
+#posts {
+    margin-top: 0;
+}
+#posts > .title::before {
+    content: "# ";
+    color: #6293ca;
+}

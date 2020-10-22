@@ -4,6 +4,9 @@
 {{ end }}
 <div class="grid-inverse wrap content">
   <ul class="posts" id="posts">
+    {{ if eq .IsHome false }}
+    <h1 class="title">{{ .Title }}</h1>
+    {{ end }}
     {{- range (.Paginate $pages).Pages }}
       {{ partial "excerpt" . }}
     {{- end }}
