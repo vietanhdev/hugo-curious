@@ -67,8 +67,15 @@ h3.post_link {
     max-height: 2.8rem;
     margin-top: -0.2rem;
     margin-bottom: -0.2rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem #002538;
+    border-radius: 50%;
+    border: 2px solid #002538;
+    margin-right: 0.5rem;
 }
 
+.content {
+    padding-top: 3rem;
+}
 
 /* Centerize post content */
 .centerize-div {

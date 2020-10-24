@@ -6,6 +6,7 @@
     <a href='{{ absLangURL "" }}' class="nav_brand nav_item{{ if eq $centerLogo true }} nav_hide{{ end }}">
       {{- with $logo }}
       <img src="{{ absURL . }}" class="logo">
+      {{ $params.Title }}
       {{- else }}
         {{ .Site.Title }}
       {{- end }}
