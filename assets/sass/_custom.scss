@@ -66,11 +66,14 @@ h3.post_link {
 .nav_brand .logo {
     max-height: 2.8rem;
     margin-top: -0.2rem;
-    margin-bottom: -0.2rem;
+    margin-bottom: -0.1rem;
     box-shadow: 0.1rem 0.1rem 0.5rem #002538;
     border-radius: 50%;
     border: 2px solid #002538;
     margin-right: 0.5rem;
+}
+img.nav_icon {
+    margin: 0.8rem 0.5rem;
 }
 
 .content {
