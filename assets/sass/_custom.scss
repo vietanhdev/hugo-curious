@@ -117,16 +117,22 @@ img.nav_icon {
 .sticky-toc {
     position: fixed;
     z-index: 1020;
-    top: 75px;
+    top: 6rem;
     display: none;
     max-width: 100%;
+}
+// .js-toc:not(:empty)::before {
+//     content: "Contents";
+//     font-size: 1.4rem;
+//     font-weight: bold;
+// }
+.js-toc ol {
+    list-style-type: none;
 }
 .toc-list {
     padding-left: 30px;
 }
-.js-toc ol {
-    list-style-type: none;
-}
+
 @media screen and (min-width: 800px) {
     .sticky-toc {
         display: block;
