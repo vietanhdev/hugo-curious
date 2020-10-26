@@ -71,6 +71,11 @@ img.nav_icon {
 .content {
     padding-top: 4rem;
 }
+@media screen and (min-width: 800px) {
+    .content {
+        padding-top: 5rem;
+    }
+}
 
 /* Centerize post content */
 .centerize-div {
@@ -107,7 +112,7 @@ img.nav_icon {
 .sticky-toc {
     position: fixed;
     z-index: 1020;
-    top: 5rem;
+    top: 7rem;
     display: none;
     max-width: 100%;
 }
