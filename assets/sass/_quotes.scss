@@ -3,7 +3,7 @@ blockquote {
     font-family: var(--font);
     font-style: italic;
     padding: 1rem 1rem 1rem 3rem;
-    border-left: 8px solid $bg;
+    border-left: 8px solid var(--bg);
     position: relative;
     background: rgba(0, 0, 0, 0.03);
     margin-bottom: 0.5rem;
