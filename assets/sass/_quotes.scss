@@ -2,7 +2,7 @@ blockquote {
     border-radius: 0.5rem;
     font-family: var(--font);
     font-style: italic;
-    padding: 1rem 30px 1rem 75px;
+    padding: 1rem 1rem 1rem 3rem;
     border-left: 8px solid $bg;
     position: relative;
     background: rgba(0, 0, 0, 0.03);
@@ -14,8 +14,8 @@ blockquote::before {
     color:  var(--header-text);
     font-size: 4em;
     position: absolute;
-    left: 10px;
-    top: -10px;
+    left: 0.5rem;
+    top: -1rem;
 }
 blockquote::after {
     content: "";

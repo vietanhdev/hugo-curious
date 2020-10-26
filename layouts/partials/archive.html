@@ -11,7 +11,7 @@
       {{ if eq .IsHome false }}
       <h1 class="title">{{ .Title }}</h1>
       {{ else }}
-      <div style="margin-top: 2rem"></div>
+      <!-- <div style="margin-top: 2rem"></div> -->
       {{ end }}
       {{- range (.Paginate $pages).Pages }}
         {{ partial "excerpt" . }}

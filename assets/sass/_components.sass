@@ -139,7 +139,7 @@
     display: none
 
 .content, .footer
-  padding: 1.5rem
+  padding: 0.5rem
   @media screen and (min-width: 1441px)
     padding: 1.5rem 0
 
@@ -424,6 +424,9 @@
         grid-template-columns: 2fr 7fr
         grid-gap: 1rem
 .sidebar
+  margin-top: 1rem
+  @media screen and (min-width: 672px)
+    margin-top: 0
   &_inner
     position: relative
     &::before
@@ -449,6 +452,7 @@
 
 .pagination
   display: flex
+  margin-top: 1.5rem
 
 .page
   &-item
