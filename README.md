@@ -1,4 +1,6 @@
-# Hugo Clarity
+# My own fork of Hugo Clarity
+
+> **Notice:** I forked and modified this theme for my personal blog. You can find original theme at <https://themes.gohugo.io/theme/hugo-clarity/>.
 
 A technology-minded theme for Hugo based on VMware's open-source [Clarity Design System](https://clarity.design/) featuring rich code support, dark/light mode, mobile support, and much more. See [a live demo at __neonmirrors.net__](https://neonmirrors.net/).
 
