@@ -425,14 +425,8 @@ function fileClosure(){
     if(backToTopButton && thisOS === 'iOS') {
       pushClass(backToTopButton, ios);
     }
-    // precisely position back to top button on large screens
-    const buttonParentWidth = backToTopButton.parentNode.offsetWidth;
-    const docWidth = doc.offsetWidth;
-    let leftOffset = (docWidth - buttonParentWidth) / 2;
-    const buttonWidth = backToTopButton.offsetWidth;
-    leftOffset = leftOffset + buttonParentWidth - buttonWidth;
     if(!isMobileDevice()){
-      backToTopButton.style.left = `${leftOffset}px`;
+      backToTopButton.style.right = `100px`;
     }
   })();
 

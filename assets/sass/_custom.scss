@@ -11,6 +11,10 @@
     max-height: 3rem;
 }
 
+main > .content {
+    max-width: 1200px;
+}
+
 /* Responsive table */
 table {
     text-align: left;
