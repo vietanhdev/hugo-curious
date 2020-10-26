@@ -2,9 +2,8 @@
 #posts {
     margin-top: 0;
 }
-#posts > .title::before {
-    content: "# ";
-    color: #6293ca;
+#posts > .title {
+    margin-top: 0;
 }
 
 .nav_brand .logo {
@@ -121,7 +120,7 @@ img.nav_icon {
 .sticky-toc {
     position: fixed;
     z-index: 1020;
-    top: 6rem;
+    top: 5rem;
     display: none;
     max-width: 100%;
 }
