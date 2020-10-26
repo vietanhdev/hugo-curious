@@ -102,13 +102,19 @@ aside
     padding: 0.25rem 0
 
 table
+  border-radius: 0.5rem
   width: 100%
   border-collapse: collapse
-  background: var(--table-haze)
-  // border-style: hidden
   margin-bottom: 1.5rem
   &:not(.ln-table) t
     background: var(--table-bg)
+  background: none;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  display: block;
+  overflow-x: auto;
 
 td, th
   padding: 0.5rem 1rem
@@ -123,6 +129,7 @@ th
 
 th
   font-weight: 700
+  background-color: var(--table-haze);
 
 tbody
   padding: 0
