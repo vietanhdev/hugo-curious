@@ -1,0 +1,31 @@
+blockquote {
+    border-radius: 0.5rem;
+    font-size: 1.1em;
+    font-family: var(--font);
+    font-style: italic;
+    padding: 1rem 30px 1rem 75px;
+    border-left: 8px solid $bg;
+    line-height: 1.4;
+    position: relative;
+    background: rgba(0, 0, 0, 0.03);
+    margin-bottom: 0.5rem;
+}
+blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color:  var(--header-text);
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+blockquote::after {
+    content: "";
+}
+blockquote span {
+    display: block;
+    color:  var(--header-text);
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1rem;
+}
