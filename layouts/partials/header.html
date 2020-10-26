@@ -5,7 +5,7 @@
   <nav class="nav">
     <a href='{{ absLangURL "" }}' class="nav_brand nav_item{{ if eq $centerLogo true }} nav_hide{{ end }}">
       {{- with $logo }}
-      <img src="{{ absURL . }}" class="logo">
+      <img alt="{{ $params.Title }}" src="{{ absURL . }}" class="logo">
       {{ $params.Title }}
       {{- else }}
         {{ .Site.Title }}
@@ -39,7 +39,7 @@
 
       {{- if eq $centerLogo true }}
       <a href='{{ absLangURL "" }}' class="nav_brand nav_center nav_item">
-        <img src="{{ absURL $logo }}" class="logo">
+        <img alt="{{ $params.Title }}" src="{{ absURL $logo }}" class="logo">
       </a>
       {{- end }}
       {{- partial "follow" . }}
