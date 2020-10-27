@@ -483,8 +483,26 @@ layouts/partials/hooks/body-end.html
 
 ### Comments
 
-Clarity supports Hugo built-in Disqus partial, you can enable Disqus simply by setting [`disqusShortname`](https://gohugo.io/templates/internal/#configure-disqus) in your configuration file.
+Clarity supports Hugo built-in Disqus partial. However, I replaced it with Talkyard service using this file `layouts/partials/comments.html`. Setup instruction:
 
-> ⚠️ `disqusShortname` should be placed in root level of configuration.
+- 1. Register for a Talkyard account.
 
-You can also create a file named `layouts/partials/comments.html` for customizing the comments, checkout [Comments Alternatives](https://gohugo.io/content-management/comments/#comments-alternatives) for details.
+- 2. Add this to `config.toml` in the params section:
+
+```
+[params]
+talkyardServerUrl = "<your-talkyard-url>"
+talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
+```
+
+- **Supporting changing URLs:** To make it possible to change the URL to a blog post, without the embedded discussion disappearing, add a frontmatter discussionId: per-discussion-id to each blog post. Like so:
+
+```
+---
+title: "My First Post"
+date: 2019-03-29T12:17:24+01:00
+discussionId: 2019-03-my-first-post       <—— Add this
+---
+
+Blog post text, text, text...
+```
