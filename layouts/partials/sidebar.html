@@ -4,7 +4,7 @@
     <div class="intro">
       <h2>{{ .Site.Title }}</h2>
       <p>{{ $s.IntroDescription }}</p>
-      <a href='{{ absLangURL "about/" }}' class="button mt-1" role="button">About me</a>
+      <a href='{{ absLangURL "about/" }}' class="button mt-1" role="button">Thông tin Về tôi</a>
     </div>
     
     {{- $posts := where (where .Site.RegularPages "Permalink" "!=" .Permalink) "Type" "in" $s.mainSections }}
