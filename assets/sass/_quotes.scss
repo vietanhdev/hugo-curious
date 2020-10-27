@@ -7,9 +7,9 @@ blockquote {
     position: relative;
     background: rgba(0, 0, 0, 0.03);
     margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
 blockquote::before {
-    font-family: Arial;
     content: "\201C";
     color:  var(--header-text);
     font-size: 4em;

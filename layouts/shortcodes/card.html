@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header" id="mooc">
+        {{ if isset .Params "icon" }}
+        <img class="icon" src="{{ .Params.icon }}">
+        {{ end }}
+        <span class="title">{{ .Params.title }}</span>
+    </div>
+    <div class="card-body">
+        <ul>
+            {{ .Inner }}
+        </ul>
+    </div>
+</div>

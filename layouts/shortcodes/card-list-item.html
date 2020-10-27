@@ -1,0 +1,9 @@
+<li class="item">
+{{ if isset .Params "link" }}
+    <a href='{{ .Params.link }}' class="post-title">
+        {{ .Inner | markdownify }}
+    </a>
+{{ else }}
+    {{ .Inner | markdownify }}
+{{ end }}
+</li>
