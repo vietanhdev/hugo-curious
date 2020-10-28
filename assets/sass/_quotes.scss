@@ -14,7 +14,7 @@ blockquote::before {
     color:  var(--header-text);
     font-size: 4em;
     position: absolute;
-    left: 0.5rem;
+    left: 0.2rem;
     top: -1rem;
 }
 blockquote::after {
@@ -25,5 +25,8 @@ blockquote span {
     color:  var(--header-text);
     font-style: normal;
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
+}
+blockquote span::before {
+    content: "- "
 }
