@@ -1,0 +1,4 @@
+<p style="text-align: center;">
+    <img loading="lazy" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+</p>
+<p style="text-align: center;"><b>{{ .Text }}</b></p>
