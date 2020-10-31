@@ -36,7 +36,7 @@ if (searchQuery) {
 
 function executeSearch(searchQuery) {
     $("#loading-icon").fadeIn();
-    $.getJSON("/index.json", function (data) {
+    $.getJSON("/index.json?t=" + $("#search-db-version").text(), function (data) {
         var pages = data;
         var fuse = new Fuse(pages, fuseOptions);
         var result = fuse.search(searchQuery);
