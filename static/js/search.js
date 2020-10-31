@@ -35,13 +35,12 @@ if (searchQuery) {
 }
 
 function executeSearch(searchQuery) {
+    $("#loading-icon").fadeIn();
     $.getJSON("/index.json", function (data) {
         var pages = data;
         var fuse = new Fuse(pages, fuseOptions);
         var result = fuse.search(searchQuery);
-        // console.log({
-        //     "matches": result
-        // });
+        $("#loading-icon").hide();
         if (result.length > 0) {
             populateResults(result);
         } else {
