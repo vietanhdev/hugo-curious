@@ -5,7 +5,7 @@
         <section class="resume-section p-3 p-lg-5 d-flex flex-column">
             <div class="my-auto">
                 <h3>Search for posts</h3>
-                <form action="{{ "search" | absURL }}">
+                <form id="search-form" action="{{ "search" | absURL }}">
                     <input id="search-query" name="s" />
                     <button id="search-btn" type="submit">Search</button>
                 </form>
@@ -33,9 +33,20 @@
     </article>
 </div>
 <style>
-    #search-query {
+    #search-form {
+        display: flex;
         width: 30rem;
         max-width: 100%;
+    }
+    #search-form input {
+        width: auto;
+        flex-grow: 2;
+        margin: 0.2rem;
+    }
+    #search-form button {
+        max-width: 5rem;
+        flex-grow: 1;
+        margin: 0.2rem;
     }
 </style>
 {{ end }}
