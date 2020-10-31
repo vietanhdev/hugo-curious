@@ -32,8 +32,6 @@ var searchQuery = param("s");
 if (searchQuery) {
     $("#search-query").val(searchQuery);
     executeSearch(searchQuery);
-} else {
-    $('#search-results').append("<p>Please enter a word or phrase above</p>");
 }
 
 function executeSearch(searchQuery) {
