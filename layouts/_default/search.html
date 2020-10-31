@@ -7,9 +7,9 @@
                 <h3>Search for posts</h3>
                 <form action="{{ "search" | absURL }}">
                     <input id="search-query" name="s" />
+                    <button id="search-btn" type="submit">Search</button>
                 </form>
                 <div id="search-results">
-                    
                 </div>
             </div>
         </section>
@@ -34,7 +34,6 @@
 </div>
 <style>
     #search-query {
-        padding: 0.2rem 1rem;
         width: 30rem;
         max-width: 100%;
     }

@@ -1,0 +1,59 @@
+form label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+form label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+form span[required]{
+	color:red;
+}
+input, 
+textarea, 
+select {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+	padding: 7px;
+	outline: none;
+}
+
+input:focus, 
+textarea:focus, 
+select:focus {
+	border: 1px solid $theme;
+}
+textarea{
+	height:100px;
+}
+input[type=submit],
+input[type=button],
+button{
+	border: none;
+	padding: 8px 15px 8px 15px;
+	background: $theme;
+	color: #fff;
+	box-shadow: 1px 1px 4px #DADADA;
+	-moz-box-shadow: 1px 1px 4px #DADADA;
+	-webkit-box-shadow: 1px 1px 4px #DADADA;
+	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	-moz-border-radius: 0.5rem;
+}
+input[type=submit]:hover,
+input[type=button]:hover,
+button:hover{
+	background: $theme;
+	color: #fff;
+}
