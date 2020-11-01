@@ -22,15 +22,19 @@
               <p>${snippet}</p>
               <!-- <p>${score}</p> -->
               <p>
-              ${ isset tags }<b>Tags:</b> ${tags}, ${ end }
-              ${ isset categories }<b>Categories:</b> ${categories}${ end }
-            </p>
+                ${ isset tags }<b>Tags:</b> ${tags}, ${ end }
+                ${ isset categories }<b>Categories:</b> ${categories}${ end }
+              </p>
             </div>
         </script>
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.0/dist/fuse.min.js" integrity="sha256-44iNtFp2C5YlmyyW9jdvQCHcdW+p33YepLWSYV3TmY0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+        <!-- NOTICE: Different versions of Fuse.js provide different search results -->
+        <!-- I have tried multiple version and choose this version for its results. Other versions have different sorting algorithms or may not work well with Vietnamese (maybe other languages too?) -->
+        <!-- If you satisfy with the result, please don't change the version of Fuse.js here. -->
+        <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.6.1/dist/fuse.min.js"></script>
+
         <script src="{{ "js/search.js" | absURL }}"></script>
     </article>
 </div>

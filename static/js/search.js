@@ -3,27 +3,28 @@ var fuseOptions = {
     shouldSort: true,
     includeMatches: true,
     threshold: 0.0,
-    tokenize:true,
+    tokenize: true,
     location: 0,
     distance: 100,
     maxPatternLength: 32,
-    minMatchCharLength: 1,
+    minMatchCharLength: 3,
     includeScore: true,
+    isCaseSensitive: false,
     keys: [{
             name: "title",
-            weight: 0.8
+            weight: 0.6
         },
         {
             name: "contents",
-            weight: 0.8
+            weight: 0.3
         },
         {
             name: "tags",
-            weight: 0.3
+            weight: 0.05
         },
         {
             name: "categories",
-            weight: 0.3
+            weight: 0.05
         }
     ]
 };
