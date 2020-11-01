@@ -13,6 +13,12 @@
 main > .content {
     max-width: 1024px;
 }
+@media screen and (min-width: 1366px) {
+    main > .content {
+        max-width: 1200px;
+    }
+}
+
 
 /* Centerize imaes */
 .post_content img {
@@ -82,7 +88,7 @@ img.nav_icon {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    max-width: 900px;
+    max-width: 1000px;
 }
 .post_content h2 {
     font-weight: bolder;
