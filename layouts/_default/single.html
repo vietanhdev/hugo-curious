@@ -7,8 +7,9 @@
 {{- end }}
 {{- $image := $scratch.Get "image" }}
 {{- $bg := (path.Join "images" $image | absLangURL) }}
+{{- $show_toc := (and .Params.toc (gt (len .TableOfContents) 80)) }}
 
-<div class="{{ if .Params.toc }}grid-inverse{{- else }}centerize-div{{ end }} wrap content">
+<div class="wrap content {{ if $show_toc }}grid-inverse{{- else }}without-toc{{ end }}">
   <article class="post_content">
     {{- partial "i18nlist" . }}
     <h1 class="post_title">{{ .Title }}</h1>
@@ -28,7 +29,7 @@
     {{ end }}
   </article>
 
-  {{ if .Params.toc }}
+  {{ if $show_toc }}
   <aside class="sidebar">
     <section class="sidebar_inner">
       

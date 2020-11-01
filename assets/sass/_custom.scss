@@ -13,14 +13,23 @@
 main > .content {
     max-width: 1024px;
 }
+main > .content.without-toc{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 800px;
+}
 @media screen and (min-width: 1366px) {
     main > .content {
         max-width: 1200px;
     }
+    main > .content.without-toc {
+        max-width: 900px;
+    }
 }
 
 
-/* Centerize imaes */
+/* Centerize images */
 .post_content img {
     display: block;
     margin-left: auto;
@@ -83,13 +92,6 @@ img.nav_icon {
     }
 }
 
-/* Centerize post content */
-.centerize-div {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    max-width: 1000px;
-}
 .post_content h2 {
     font-weight: bolder;
     border-radius: 0.5rem;
