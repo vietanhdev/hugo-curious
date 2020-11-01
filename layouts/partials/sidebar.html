@@ -10,7 +10,7 @@
     {{- $posts := where (where .Site.RegularPages "Permalink" "!=" .Permalink) "Type" "in" $s.mainSections }}
     {{- $featured := default 8 $s.numberOfFeaturedPosts }}
     {{- with first $featured (where $posts "Params.featured" true)}}
-    <h2 class="mt-4">{{ i18n "featured_posts" }}</h2>
+    <h2 class="widget-title mt-4">{{ i18n "featured_posts" }}</h2>
     <ul>
       {{- range . }}
       <li>
@@ -19,7 +19,7 @@
       {{- end }}
     </ul>
     {{- end }}
-    <h2 class="mt-4">{{ i18n "recent_posts" }}</h2>
+    <h2 class="widget-title mt-4">{{ i18n "recent_posts" }}</h2>
     <ul class="flex-column">
       {{- $recent := default 8 $s.numberOfRecentPosts }}
       {{- range first $recent $posts }}
@@ -32,7 +32,7 @@
     {{- range $key, $value := .Site.Taxonomies }}
     {{- if gt $value 0 }}
     <div>
-      <h2 class="mt-4 taxonomy" id="{{ $key }}-section">{{ i18n $key }}</h2>
+      <h2 class="widget-title mt-4 taxonomy" id="{{ $key }}-section">{{ i18n $key }}</h2>
       <nav class="tags_nav">
         {{- $onPageTags := $.Page.Params.tags }}
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
