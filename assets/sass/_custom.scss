@@ -257,5 +257,6 @@ a {
 
 // Auto hide navbar when scrolling down
 #top-navbar {
+    top: 0;
     transition: top 0.5s;
 }
