@@ -28,6 +28,24 @@
             </div>
         </script>
 
+        <style>
+            #search-form {
+                display: flex;
+                width: 30rem;
+                max-width: 100%;
+            }
+            #search-form input {
+                width: auto;
+                flex-grow: 2;
+                margin: 0.2rem;
+            }
+            #search-form button {
+                max-width: 5rem;
+                flex-grow: 1;
+                margin: 0.2rem;
+            }
+        </style>
+
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
         <!-- NOTICE: Different versions of Fuse.js provide different search results -->
@@ -38,21 +56,4 @@
         <script src="{{ "js/search.js" | absURL }}"></script>
     </article>
 </div>
-<style>
-    #search-form {
-        display: flex;
-        width: 30rem;
-        max-width: 100%;
-    }
-    #search-form input {
-        width: auto;
-        flex-grow: 2;
-        margin: 0.2rem;
-    }
-    #search-form button {
-        max-width: 5rem;
-        flex-grow: 1;
-        margin: 0.2rem;
-    }
-</style>
 {{ end }}
