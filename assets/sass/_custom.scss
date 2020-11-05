@@ -253,3 +253,9 @@ a {
     -moz-hyphens: auto;
         hyphens: auto;
 }
+
+
+// Auto hide navbar when scrolling down
+#top-navbar {
+    transition: top 0.5s;
+}
