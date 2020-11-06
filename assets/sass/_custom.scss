@@ -260,3 +260,14 @@ a {
     top: 0;
     transition: top 0.5s;
 }
+
+// Logo
+.logo:hover {
+	-o-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+    transform: scale(1.2) rotate(360deg);
+    left: -2rem;
+    transition: all 0.3s;
+}
+    
