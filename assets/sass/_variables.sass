@@ -3,7 +3,7 @@ $icons: '../icons/'
 $images: '../images/'
 $light: #fff
 $haze: #fafafa
-$xhaze: darken($haze, 11%)
+$xhaze: darken($haze, 5%)
 $bg: #002538
 $theme: #0077b8
 
@@ -18,7 +18,7 @@ $theme: #0077b8
   margin: $margin auto
   @content
 
-@mixin shadow($opacity: 0.17)
+@mixin shadow($opacity: 0.24)
   box-shadow: 0 0 3rem rgba(0,0,0,$opacity)
   &:hover
     box-shadow: 0 0 5rem rgba(0,0,0, (1.5 * $opacity))
@@ -45,7 +45,7 @@ html
   --translucent: rgba(0,0,0,0.05)
   --translucent-light: rgba(255,255,255,0.05)
   --post-bg: var(--light)
-  --choice-bg: var(--haze)
+  --choice-bg: var(--light)
   --ease: cubic-bezier(0.39, 0.575, 0.565, 1)
   --easing: cubic-bezier(.19,1,.22,1)
   &.page
