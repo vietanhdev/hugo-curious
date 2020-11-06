@@ -57,3 +57,7 @@ button:hover{
 	background: $theme;
 	color: #fff;
 }
+
+form, input, textarea, button, select {
+	font-size: inherit;
+}
