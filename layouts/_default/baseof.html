@@ -7,7 +7,10 @@
     <!-- styles definition-->
     {{- $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" "true") -}}
     {{ $mainSassFile :=  "sass/main.sass" }}
-    {{- $styles := resources.Get $mainSassFile | resources.ExecuteAsTemplate $mainSassFile . | resources.ToCSS $options | resources.Fingerprint "sha512" }}
+    {{- $styles := resources.Get $mainSassFile | resources.ExecuteAsTemplate $mainSassFile . | resources.ToCSS $options }}
+    {{- if (eq (getenv "HUGO_ENV") "production") -}}
+      {{- $styles = $styles | postCSS | minify | fingerprint "sha512" -}}
+    {{- end -}}
 
     <!-- scripts definition -->
     {{- $highlightPath := "js/highlight.js" }}
