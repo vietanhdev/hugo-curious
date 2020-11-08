@@ -16,7 +16,7 @@
   &, &_body
   &_icon
     width: 0.7rem
-    margin-left: 0.33rem
+    margin: 0.8rem 0.2rem
     transition: transform 0.3s var(--ease)
     transform-origin: 50% 50%
   &_body
@@ -32,7 +32,7 @@
     // border-bottom: 3px solid #44CCFF;
     box-shadow: 0.05rem 0.05rem 0.25rem rgba(100, 100, 100, 0.5)
   &_item
-    padding: 0.5rem 1rem
+    padding: 0 1rem
     display: inline-flex
     align-items: center
   &_sub
@@ -119,8 +119,21 @@
       padding-left: 0
       // margin-left: -16rem
       // transform: translateX(50rem)
-      img
+      img.logo
         background: transparent !important
+        max-height: 2.6rem;
+        margin-bottom: -0.1rem;
+        box-shadow: 0.1rem 0.1rem 0.5rem #002538;
+        border-radius: 50%;
+        border: 2px solid #002538;
+        margin-right: 0.5rem;
+        &:hover
+          -o-transform: scale(1.2)
+          -webkit-transform: scale(1.2)
+          -ms-transform: scale(1.2)
+          transform: scale(1.2) rotate(360deg)
+          left: -2rem
+          transition: all 0.3s
 
   &_center
     display: none
@@ -144,8 +157,25 @@
     padding: 1.5rem 0
 
 .content
-  padding-top: 8rem
+  max-width: 1024px
+  padding-top: 4rem
   @include content
+
+@media screen and (min-width: 800px)
+  .content
+    padding-top: 5rem
+
+.content.without-toc
+  margin-left: auto
+  margin-right: auto
+  display: block
+  max-width: 800px
+
+@media screen and (min-width: 1366px)
+    .content
+      max-width: 1200px
+    .content.without-toc
+      max-width: 900px
 
 .footer 
   border-top: 1px solid $xhaze
@@ -212,9 +242,12 @@
       padding-top: 0
   &_item
     box-shadow: 0 4px 8px 0 var(--shadow)
-    margin-bottom: 3rem
+    margin-top: 0.5rem
+    margin-bottom: 0.2rem
     border-radius: 0.5rem
     background: var(--post-bg)
+    @media screen and (min-width: 664px)
+      margin-top: 1.5rem
   &_tag
     padding: 0.2rem 0.8rem
     font-size: 0.8rem
@@ -251,6 +284,7 @@
     margin-right: 0.5rem
     margin-left: 0.25rem
   &_content
+    overflow-x: auto
     a
       color: $theme
     ul, ol
@@ -260,6 +294,33 @@
         padding-top: 0.25rem
     ol
       list-style: decimal
+    img
+      display: block
+      margin-left: auto
+      margin-right: auto
+      background-color: #fff
+      padding: 0.5rem
+    h2
+      font-weight: bolder
+      border-radius: 0.5rem
+      background: rgba(100, 100, 100, 0.1)
+      border-left: 8px solid #fc9e07
+      padding-left: 1rem
+    h3
+      font-weight: 400
+      border-bottom: 2px solid #ddd
+      &::before
+        content: "● "
+        color: #8ed08e
+    h4
+      font-weight: 400
+      &::before
+        content: "+ "
+        color: #ff5e00
+
+
+h3.post_link
+  font-weight: bolder
 
 .scrollable
   display: grid
@@ -409,8 +470,11 @@
 .excerpt
   &_header, &_footer
     padding: 1rem
+  &_header .post_link
+    margin-top: 0
   &_footer
     padding: 0 1rem 2.25rem 1rem
+    padding-bottom: 0.5rem;
   &_thumbnail
     min-height: 10rem
     display: none
@@ -423,6 +487,7 @@
       @media screen and (min-width: 769px) 
         grid-template-columns: 2fr 7fr
         grid-gap: 1rem
+
 .sidebar
   margin-top: 1rem
   @media screen and (min-width: 672px)
@@ -600,3 +665,16 @@
     display: block
     margin-left: auto !important
     margin-right: auto !important
+
+
+#posts
+  margin-top: 0
+
+#posts > .title
+    margin-top: 0
+
+
+// Auto hide navbar when scrolling down
+#top-navbar
+  top: 0
+  transition: top 0.5s

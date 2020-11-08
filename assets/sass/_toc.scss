@@ -1,0 +1,19 @@
+/* Table of contents */
+.sticky-toc {
+    position: fixed;
+    z-index: 1020;
+    top: 7rem;
+    display: none;
+    max-width: 100%;
+}
+.js-toc ol {
+    list-style-type: none;
+}
+.toc-list {
+    padding-left: 30px;
+}
+@media screen and (min-width: 800px) {
+    .sticky-toc {
+        display: block;
+    }
+}

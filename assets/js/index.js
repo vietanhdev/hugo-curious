@@ -225,60 +225,6 @@ function fileClosure(){
     return showImagePosition === "true" ? true : false;
   }
 
-  function populateAlt(images) {
-    let imagePosition = 0;
-
-    images.forEach((image) => {
-      let alt = image.alt;
-      image.loading = "lazy";
-      const modifiers = [':left', ':right'];
-      const altArr = alt.split('::').map(x => x.trim())
-
-      if (altArr.length > 1) {
-        altArr[1].split(' ').filter(Boolean).forEach(cls =>{
-          pushClass(image, cls);
-          alt = altArr[0]
-        })
-      }
-
-      modifiers.forEach(function(modifier){
-        const canModify = alt.includes(modifier);
-        if(canModify) {
-          pushClass(image, `float_${modifier.replace(":", "")}`);
-          alt = alt.replace(modifier, "");
-        }
-      });
-
-      const isInline = alt.includes(inline);
-      alt = alt.replace(inline, "");
-
-      // wait for position to load and a caption if the image is not online and has an alt attribute
-      if (alt.length > 0 && !containsClass(image, 'alt' && !isInline)) {
-        imagePosition += 1;
-        image.dataset.pos = imagePosition;
-        image.addEventListener('load', function() {
-          const showImagePosition = showingImagePosition();
-
-          let desc = document.createElement('p');
-          desc.classList.add('img_alt');
-          let imageAlt = alt;
-
-          const thisImgPos = image.dataset.pos;
-          // modify image caption is necessary
-          imageAlt = showImagePosition ? `${showImagePositionLabel} ${thisImgPos}: ${imageAlt}` : imageAlt;
-          desc.textContent = imageAlt;
-          image.insertAdjacentHTML('afterend', desc.outerHTML);
-        })
-      }
-
-      if(isInline) {
-        modifyClass(image, 'inline');
-      }
-    });
-
-    hljs.initHighlightingOnLoad();
-  }
-
   function largeImages(baseParent, images = []) {
     if(images) {
       images.forEach(function(image) {
@@ -297,13 +243,6 @@ function fileClosure(){
       })
     }
   }
-
-  (function AltImage() {
-    let post = elem('.post_content');
-    let images = post ? post.querySelectorAll('img') : false;
-    images ? populateAlt(images) : false;
-    largeImages(post, images);
-  })();
 
   doc.addEventListener('click', function(event) {
     let target = event.target;
