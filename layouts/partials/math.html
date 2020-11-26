@@ -9,8 +9,16 @@
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <style>
-  mjx-container[jax="CHTML"][display="true"] {
-    text-align: left;
+  mjx-container.MathJax[display="inline"] {
+    font-size: 150%!important;
+  }
+  mjx-container.MathJax[display="true"] {
+    text-align: left !important;
+  }
+  @media screen and (min-width: 600px) {
+    mjx-container.MathJax[display="true"] {
+      padding-left: 2rem;
+    }
   }
 </style>
 {{- end }}
