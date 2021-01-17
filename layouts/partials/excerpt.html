@@ -1,22 +1,73 @@
-<li class="post_item">
-  <div class="excerpt">
-    <div class="excerpt_header">
-      <h3 class="post_link">
-        <a href="{{ .Permalink }}">{{ .Title  }}</a>
-      </h3>
-      {{ partial "post-meta" . }}
-    </div>
+<article data-aos="fade-up" class="post-card post shine aos-init aos-animate">
+  <a class="post-card-image-link" href="{{ .Permalink }}">
+    {{ $pageTitle := .Title }}
     {{- with .Params.thumbnail }}
-    <div class="excerpt_footer partition">
-      <div class="excerpt_thumbnail">
-        <img src='{{ if (hasPrefix . "http") }}{{ . }}{{ else }}{{ absURL . }}{{ end }}'>
-      </div>
-      {{ else }}
-      <div class="excerpt_footer">
-        {{- end }}
-        <div>
-          <p class="pale">{{ truncate 320 .Summary }}</p>
+    <img class="post-card-image hover-effect"
+      alt="{{ $pageTitle }}"
+      src="{{ if (hasPrefix . "http") }}{{ . }}{{ else }}{{ absURL . }}{{ end }}">
+    {{ else }}
+    <img class="post-card-image hover-effect"
+      alt="{{ $pageTitle }}"
+      src="/images/thumbnail.jpg">
+    {{- end }}
+  </a>
+  <ul class="share">
+    <li><a class="twitter" title="Share by twitter"
+        href="https://twitter.com/share?url={{ .Permalink }}"
+        onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+        <img src="/icons/twitter.png" alt="twitter">
+      </a>
+    </li>
+    <li><a class="facebook" title="Share by facebook"
+        href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}"
+        onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+        <img src="/icons/facebook.svg" alt="facebook">
+      </a>
+    </li>
+    <li><a href="mailto:?subject={{ .Title }}" class="email"
+        title="Share by Email">
+        <img src="/icons/email.png" alt="email">
+      </a>
+    </li>
+  </ul>
+  <div class="post-card-content ">
+    <div class="post-card-content-link">
+      <header class="post-card-header">
+        <div class="header-container">
+          <div class="post_meta">
+            <!-- <div style="width: 100%;">
+              {{ partial "sprite" (dict "icon" "calendar") }}
+            <span class="post_date">
+              {{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) -}}
+            </span>
+            </div> -->
+            {{- with .Params.categories -}}
+              {{- range . }}
+              {{- $cat := urlize . }}
+              <a href='{{ absLangURL (printf "categories/%s" $cat) }}' class="post_tag button button_translucent">
+                {{- . }}
+              </a>
+            {{- end }}
+            {{- end }}
+          </div>          
         </div>
-      </div>
+        <h2 class="post-card-title gradient-effect">
+          <a class="card-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+      </header>
+      <a class="card-link" href="{{ .Permalink }}">
+        <section class="post-card-excerpt">
+          <p>{{ truncate 320 .Summary }}</p>
+        </section>
+      </a>
     </div>
-  </li>
+    <footer class="post-card-meta center">
+      <div class="author-list-item">
+        <div class="author-name-tooltip">
+          {{ .Site.Params.Author }} </div>
+        <a href="/about/" class="footer-color">{{ .Site.Params.Author }}</a>
+      </div>
+      <span class="reading-time">{{ .ReadingTime }} min read</span>
+    </footer>
+  </div>
+</article>

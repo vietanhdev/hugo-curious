@@ -10,12 +10,18 @@
     <ul class="posts" id="posts">
       {{ if eq .IsHome false }}
       <h1 class="title">{{ .Title }}</h1>
-      {{ else }}
-      <!-- <div style="margin-top: 2rem"></div> -->
       {{ end }}
-      {{- range (.Paginate $pages).Pages }}
-        {{ partial "excerpt" . }}
-      {{- end }}
+      <div class="post-feed" data-infinite-scroll='{ "path": ".next-page", "append": ".post-feed", "history": false, "hideNav": ".pagination" }'>
+        {{- range (.Paginate $pages).Pages }}
+          {{ partial "excerpt" . }}
+        {{- end }}
+        {{ $paginator := .Paginator }}
+        {{ if $paginator.HasNext }}
+          <a style="display: none;" class="next-page" href="{{ $paginator.Next.URL }}">
+            Load More
+          </a>
+        {{ end }}
+      </div>
       <li>
         {{- template "_internal/pagination.html" . }}
       </li>
@@ -24,3 +30,6 @@
   
   {{- partial "sidebar" . }}
 </div>
+
+<script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
+
