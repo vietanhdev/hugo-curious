@@ -215,12 +215,8 @@
         flex: 0 1 357px;
     }
 
-    .post-card-large h2 {
-        font-size: 2.6rem;
-    }
 
     .post-card-large p {
-        font-size: 1.8rem;
         line-height: 1.55em;
     }
 
@@ -488,4 +484,11 @@ a.footer-color:hover {
     .flex-50 {
         flex: 0 1 50% !important;
     }
+}
+
+.next-page-btn {
+    display: block;
+    max-width: 25%;
+    padding: 0.5rem 1rem;
+    text-align: center;
 }

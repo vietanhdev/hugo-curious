@@ -11,19 +11,19 @@
       {{ if eq .IsHome false }}
       <h1 class="title">{{ .Title }}</h1>
       {{ end }}
-      <div class="post-feed" data-infinite-scroll='{ "path": ".next-page", "append": ".post-feed", "history": false, "hideNav": ".pagination" }'>
+      <div class="post-feed" data-infinite-scroll='{ "path": ".next-page-btn", "append": ".post-card", "history": false, "hideNav": ".pagination-wrapper" }'>
         {{- range (.Paginate $pages).Pages }}
           {{ partial "excerpt" . }}
         {{- end }}
         {{ $paginator := .Paginator }}
+      </div>
+      <li class="pagination-wrapper">
         {{ if $paginator.HasNext }}
-          <a style="display: none;" class="next-page" href="{{ $paginator.Next.URL }}">
-            Load More
+          <a class="next-page-btn page-link" href="{{ $paginator.Next.URL }}">
+            Next Page
           </a>
         {{ end }}
-      </div>
-      <li>
-        {{- template "_internal/pagination.html" . }}
+        <!-- {{- template "_internal/pagination.html" . }} -->
       </li>
     </ul>
   </div>

@@ -1,4 +1,8 @@
-<article data-aos="fade-up" class="post-card post shine aos-init aos-animate">
+<article data-aos="fade-up" class="post-card 
+  {{ if lt (index (seq 100 | shuffle) 0) 10}}
+  post-card-large
+  {{ end }}
+  post shine aos-init aos-animate">
   <a class="post-card-image-link" href="{{ .Permalink }}">
     {{ $pageTitle := .Title }}
     {{- with .Params.thumbnail }}
