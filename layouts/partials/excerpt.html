@@ -61,7 +61,13 @@
       </header>
       <a class="card-link" href="{{ .Permalink }}">
         <section class="post-card-excerpt">
-          <p>{{ truncate 320 .Summary }}</p>
+          <p>
+            {{ if .Description }}
+              {{ truncate 240 .Description }}
+            {{ else }}
+              {{ truncate 240 .Summary }}
+            {{ end }}
+          </p>
         </section>
       </a>
     </div>
