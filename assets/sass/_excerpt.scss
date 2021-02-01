@@ -23,8 +23,8 @@
 .post-feed {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 0 -20px;
-    padding: 40px 0 0;
+    margin: 0 -10px;
+    padding: 2rem 0 0;
 
     .post_tag {
         margin-left: 0;
@@ -49,7 +49,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
     overflow: hidden;
-    margin: 0 20px 40px;
+    margin: 0 0.5rem 2rem;
     min-height: 20rem;
     background: rgba(255, 255, 255, 0.6);
     background-size: cover;
