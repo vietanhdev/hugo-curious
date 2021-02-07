@@ -9,7 +9,7 @@
 {{- $bg := (path.Join "images" $image | absLangURL) }}
 {{- $show_toc := (and .Params.toc (gt (len .TableOfContents) 80)) }}
 
-<div class="wrap content {{ if $show_toc }}grid-inverse{{- else }}without-toc{{ end }}">
+<div class="wrap content {{ if $show_toc }}grid-inverse{{- else }}without-toc{{ end }} {{ if eq .Type "posts" }}type-post{{ end }}">
   <article class="post_content">
     {{- partial "i18nlist" . }}
     <h1 class="post_title">{{ .Title }}</h1>
