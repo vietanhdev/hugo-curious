@@ -22,6 +22,9 @@
     {{- .Content }}
     </div>
     {{ if eq .Type "posts" }}
+    <div style="border: 2px solid #efefef; padding: 2rem; margin-top: 2rem;">
+      {{ partial "subscriber-form" }}
+    </div>
     {{ if and ( ne .Site.Params.comment false ) ( ne .Params.comment false ) }}
       {{ partial "comments" . }}
     {{ end }}
