@@ -4,7 +4,10 @@
     <article class="post_content">
         <section class="resume-section p-3 p-lg-5 d-flex flex-column">
             <div class="my-auto">
-                <h1>Search for posts</h1>
+                <h1>{{ .Title }}</h1>
+                <p>Search for posts and notes<br>
+                    <a href="/categories/">&gt; Browse by Categories.</a><br>
+                    <a href="/tags/">&gt; Browse by Tags.</a></p>
                 <form id="search-form" action="{{ "search" | absURL }}">
                     <input id="search-query" placeholder="Type here to search" name="s" />
                     <button id="search-btn" type="submit">Search</button>
@@ -30,6 +33,7 @@
 
         <style>
             #search-form {
+                font-size: 1rem;
                 display: flex;
                 width: 30rem;
                 max-width: 100%;
