@@ -13,9 +13,6 @@
 }
 #mc_embed_signup input {
     border: 1px solid #abb0b2;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
 }
 #mc_embed_signup input[type="checkbox"] {
     -webkit-appearance: checkbox;
@@ -28,9 +25,6 @@
 }
 #mc_embed_signup .button {
     clear: both;
-    border: 0 none;
-    border-radius: 4px;
-    transition: all 0.23s ease-in-out 0s;
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
@@ -150,7 +144,6 @@
 #mc_embed_signup div#mce-responses {
     float: left;
     overflow: hidden;
-    width: 90%;
     clear: both;
     margin-bottom: 1rem;
 }
@@ -160,7 +153,6 @@
     float: left;
     top: -1.5em;
     z-index: 1;
-    width: 80%;
 }
 #mc_embed_signup #mce-error-response {
     display: none;
@@ -198,9 +190,6 @@
     margin: 2px 0 1em 0;
     padding: 5px 10px;
     background-color: rgba(255, 255, 255, 0.85);
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
     font-size: 14px;
     font-weight: normal;
     z-index: 1;

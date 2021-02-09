@@ -1,5 +1,5 @@
 {{- $.Scratch.Add "index" slice -}}
-{{ $posts := (where (.Site.RegularPages) "Type" "posts") }}
+{{ $posts := (where (.Site.RegularPages) "Type" "in" .Site.Params.searchTypes) }}
 {{- range $posts  -}}
     {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "contents" .Plain "permalink" .Permalink) -}}
 {{- end -}}
