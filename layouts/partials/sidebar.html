@@ -7,7 +7,7 @@
       <a href='{{ absLangURL "about/" }}' class="button mt-1" role="button">Meet Author</a>
     </div>
 
-    {{ partial "subscriber-form" }}
+    {{ partial "subscriber-form" . }}
     
     {{- $posts := where (where .Site.RegularPages "Permalink" "!=" .Permalink) "Type" "in" $s.mainSections }}
     {{- $featured := default 8 $s.numberOfFeaturedPosts }}
