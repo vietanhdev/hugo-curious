@@ -79,3 +79,9 @@
 .content.type-post {
     max-width: 1250px;
 }
+
+@media (min-width: 768px) {
+    body {
+        padding-right: 2rem;
+    }
+}
