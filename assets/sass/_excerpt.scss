@@ -68,10 +68,6 @@
     -webkit-transform: translate3D(0, -1px, 0) scale(1.02);
 }
 
-.author-name-tooltip {
-    -webkit-box-shadow: rgba(39, 44, 49, .08) 0 12px 26px, rgba(39, 44, 49, .03) 1px 3px 8px;
-}
-
 .post-card-image-link {
     display: block;
     overflow: hidden;
@@ -144,36 +140,9 @@
     z-index: 10;
 }
 
-.author-name-tooltip {
-    position: absolute;
-    bottom: 105%;
-    z-index: 999;
-    display: block;
-    padding: 2px 8px;
-    color: #fff;
-    font-size: 1.2rem;
-    letter-spacing: .2px;
-    white-space: nowrap;
-    background: #15171a;
-    border-radius: 3px;
-    box-shadow: 0 12px 26px rgba(39, 44, 49, .08), 1px 3px 8px rgba(39, 44, 49, .03);
-    opacity: 0;
-    -webkit-transition: all .3s cubic-bezier(.4, .01, .165, .99);
-    transition: all .3s cubic-bezier(.4, .01, .165, .99);
-    -webkit-transform: translateY(6px);
-    transform: translateY(6px);
-    pointer-events: none;
-}
-
 .reading-time {
     color: #738a94;
     text-transform: uppercase;
-}
-
-.author-list-item:hover .author-name-tooltip {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
 }
 
 .reading-time {
@@ -230,9 +199,6 @@
 }
 
 @media (max-width:650px) {
-    .author-name-tooltip {
-        display: none;
-    }
 
     .post-feed {
         padding-top: 5vw;
@@ -350,10 +316,10 @@ article .share {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
 }
 
 .share .twitter {
