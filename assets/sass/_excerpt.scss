@@ -406,11 +406,11 @@ a.footer-color:hover {
     background-size: 0 2px;
     background-repeat: no-repeat;
     background-position: left 87%;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: background 0.6s ease;
+    -moz-transition: background 0.6s ease;
+    -ms-transition: background 0.6s ease;
+    -o-transition: background 0.6s ease;
+    transition: background 0.6s ease;
 }
 
 .post-card-meta {
