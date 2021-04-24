@@ -1,4 +1,8 @@
 +++
-author = "Hugo Authors"
-description = "A theme based on VMware's Clarity Design System for publishing technical blogs with Hugo." # set your site's description here. will be use for home page content meta tags (seo).
+author = "vietanhdev"
+title = "Home"
 +++
+
+{{< quote author="Andrew Ng">}}
+It is difficult to think of a major industry that AI will not transform. This includes healthcare, education, transportation, retail, communications, and agriculture. There are surprisingly clear paths for AI to make a big difference in all of these industries.
+{{< /quote >}}

@@ -1,0 +1,31 @@
+<div id="contact-form">
+    <form method="post" action="{{ .Site.Params.contactFormSubmitUrl }}">
+        <p><label for="fname"><b>Your name </b></label>
+            <input name="name" id="fname" type="text" tabindex="1" autofocus></p>
+
+        <p><label for="email"><b>Your email*</b></label>
+            <input name="email" id="email" type="email" tabindex="2" required></p>
+
+        <p><label for="phone"><b>Your phone number</b></label>
+            <input name="phone" id="phone" type="tel" tabindex="3"></p>
+
+        <p><label for="message"><b>Message</b></label>
+            <textarea name="message" id="message" style="padding: 0.5rem; width: 100%; max-width: 100%"
+                placeholder="Your message..." tabindex="5" required rows="10"></textarea></p>
+
+        <button class="button" name="submit" type="submit" id="contact-submit"
+            data-submit="...Sending">Send message</button>
+    </form>
+</div>
+
+
+<style>
+    #contact-form {
+        margin-top: 1rem;
+    }
+    #contact-form input,
+    #contact-form textarea {
+        width: 30rem;
+        max-width: 100%;
+    }
+</style>
