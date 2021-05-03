@@ -2,10 +2,11 @@
 <div class="wrap content">
     
     <article class="post_content">
-        <section class="resume-section p-3 p-lg-5 d-flex flex-column">
+        <section id="search-form-wrapper" class="p-3 p-lg-5 d-flex flex-column">
             <div class="my-auto">
-                <h1>{{ .Title }}</h1>
-                <p>Search for posts and notes<br>
+                <!-- <h1>{{ .Title }}</h1> -->
+                <a href="/search/"><img src="/images/aicurious_search.png" style="width: 20rem"></a>
+                <p style="text-align: center;">Search for posts and notes<br>
                     <a href="/categories/">&gt; Browse by Categories.</a><br>
                     <a href="/tags/">&gt; Browse by Tags.</a></p>
                 <form id="search-form" action="{{ "search" | absURL }}">
@@ -37,6 +38,8 @@
                 display: flex;
                 width: 30rem;
                 max-width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
             #search-form input {
                 width: auto;
@@ -47,6 +50,9 @@
                 max-width: 5rem;
                 flex-grow: 1;
                 margin: 0.2rem;
+            }
+            .add-margin-top-search-form {
+                margin-top: 10%;
             }
         </style>
 

@@ -31,8 +31,11 @@ var fuseOptions = {
 
 var searchQuery = param("s");
 if (searchQuery) {
+    $("#search-form-wrapper").removeClass("add-margin-top-search-form");
     $("#search-query").val(searchQuery);
     executeSearch(searchQuery);
+} else {
+    $("#search-form-wrapper").addClass("add-margin-top-search-form");
 }
 
 function executeSearch(searchQuery) {
