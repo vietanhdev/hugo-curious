@@ -1,0 +1,16 @@
+# Show or hide by uncommenting and vice versa
+- item: "github"
+  url: "https://github.com/vietanhdev"
+# - item: "twitter"
+#   url: "https://twitter.com/vietanhdev"
+# - item: "linkedin"
+#   url: "https://www.linkedin.com/in/vietanhdev"
+- item: "youtube"
+  url: "https://www.youtube.com/channel/UCLUmTiBrfQZi6WZE6kYmGmw"
+# - item: "facebook"
+#  url: "https://facebook.com/#"
+# - item: "instagram"
+# url: "https://instagram.com/#"
+# - item: "rss"
+#   url: "index.xml"
+#   internal:  true

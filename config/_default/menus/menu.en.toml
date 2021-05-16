@@ -1,0 +1,42 @@
+[[main]]
+  name = "Blog"
+  url = ""
+  weight = 10
+
+[[main]]
+  name = "Notes"
+  url = "/notes/"
+  weight = 20
+
+[[main]]
+  name = "Author"
+  url = "/about/"
+  weight = 30
+
+[[main]]
+  name = "Links"
+  url = "/links/"
+  identifier = "Links"
+  weight = 45
+
+[[main]]
+  name = "AICurious"
+  url = "https://aicurious.io/"
+  parent = "Links"
+  weight = 10
+
+[[main]]
+  name = "HUGO Framework"
+  url = "https://gohugo.io/"
+  parent = "Links"
+  weight = 20
+
+[[main]]
+  name = "<img src=\"/icons/mail.svg\" style=\"height:1.2rem; display: inline; margin: 0;\">"
+  url = "/contact/"
+  weight = 50
+
+[[main]]
+  name = "<img src=\"/icons/search.svg\" style=\"height:1.2rem; display: inline; margin: 0;\">"
+  url = "/search/"
+  weight = 60

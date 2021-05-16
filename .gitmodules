@@ -1,0 +1,3 @@
+[submodule "themes/hugo-curious"]
+	path = themes/hugo-curious
+	url = https://github.com/vietanhdev/hugo-curious

@@ -1,0 +1,127 @@
+# set `baseurl` to your root domain
+# if you set it to "/" share icons won't work properly on production
+baseurl = "https://hugo-curious.aicurious.io/"  # Include trailing slash
+title = "HugoCurious"
+author = "Viet-Anh Nguyen"
+copyright = "Copyright © 2016-2020, Viet-Anh Nguyen; all rights reserved."
+#canonifyurls = true
+paginate = 8
+PaginatePath = "/posts/"
+theme = "hugo-curious"
+
+DefaultContentLanguage = "en"
+# [languages]
+# config/_default/languages.toml
+
+# [menus]
+# config/_default/menus/menu.xx.toml
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true # change to false to disable inclusion of rawHTML and math functions
+      xhtml = false
+    [markup.goldmark.extensions]
+      typographer = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = "--"
+    lineNoStart = 1
+    lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
+    lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
+    noClasses = false
+    # style = "monokai"
+    tabWidth = 2
+
+[permalinks]
+  page = "/:slug/"
+  posts = "/:slug/"
+  notes = "/:slug/"
+
+[params]
+author = "Viet-Anh Nguyen"
+twitter = "@vietanhdev"
+largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
+introDescription = "Building AI-powered systems. AI modeling and deployment skills for developers, students, and researchers."
+description = "Building AI-powered systems. AI modeling and deployment skills for developers, students, and researchers." # set your site's description here. will be use for home page content meta tags (seo). Alternatively set this description in your homepage content file i.e content/_index.md. Whatever is set in the latter will take precedence
+searchTypes = ["posts", "notes"]
+
+codeLineNumbers = true
+
+# Google analytics Id
+ga_analytics = "UA-176023093-1"
+
+# limit the number of taxonomies links shown on the sidebar of each page by default.
+numberOfTagsShown = 8 # Applies for all other default & custom taxonomies. e.g categories, brands see https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
+
+# will be used on share >> twitter, facebook, linkedin
+fallBackOgImage = "images/thumbnail.jpg" 
+
+# directory(s) where your articles are located
+mainSections = ["posts"] # see config details here https://gohugo.io/functions/where/#mainsections
+
+# center logo on navbar
+centerLogo = false # Set to "true" for centering or "false" for left aligned.
+
+logo = "logo.png"
+
+# Set the collapsed mobile navigation to either appear from the left or the right
+mobileNavigation = "right" # if you prefer right change to 'right'
+
+# some site owners want to decide how they would like their sites to be introduced users. These settings give you as a site owner to decide how the user will view your site for the first time.
+
+# please note that you cannot enforce both modes at the same time. i.e by enforcing one mode, you priotise it over the other (by setting it to true). enforceDarkMode will be commented out
+
+# please also not that mode toggle UI will remain in place. That way, if a user prefers darkmode, they can have their way.
+
+enforceLightMode = true
+# enforceDarkMode = false
+
+# Text for the languages menu.
+# languageMenuName = "🌐"
+
+# Title separator, default to |.
+# titleSeparator = "|"
+
+# Enable or disable comment globally. Default to true.
+# comment = false
+
+# Maximum number of recent posts.
+numberOfRecentPosts = 8
+
+# Maximum number of featured posts.
+numberOfFeaturedPosts = 8
+
+# Comment
+talkyardServerUrl = "https://comments-for-aicurious-io.talkyard.net"
+talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
+
+# Contact form
+contactFormSubmitUrl = "https://formspree.io/xaypalea"
+
+# MailChimp Subscriber form
+mailChimpUrl = "https://vietanhdev.us13.list-manage.com/subscribe/post?u=c5f9d88238b4c0ec0106fe459&amp;id=e74e121dc8"
+
+[related]
+  includeNewer = true
+  threshold = 10
+  toLower = false
+
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
