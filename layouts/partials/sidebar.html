@@ -4,7 +4,7 @@
     <div class="intro">
       <h2>{{ .Site.Title }}</h2>
       <p>{{ $s.IntroDescription }}</p>
-      <a href='{{ absLangURL "about/" }}' class="button mt-1" role="button">Meet Author</a>
+      <a href='{{ absLangURL "about/" }}' class="button mt-1" role="button">{{ $s.author }}</a>
     </div>
 
     {{ partial "subscriber-form" . }}
