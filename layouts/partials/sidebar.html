@@ -12,7 +12,7 @@
     {{- $posts := where (where .Site.RegularPages "Permalink" "!=" .Permalink) "Type" "in" $s.mainSections }}
     {{- $featured := default 8 $s.numberOfFeaturedPosts }}
     {{- with first $featured (where $posts "Params.featured" true)}}
-    <h2 class="widget-title mt-4">{{ i18n "featured_posts" }}</h2>
+    <h2 class="widget-title mt-4" style="font-size: 1.4rem;">{{ i18n "featured_posts" }}</h2>
     <ul>
       {{- range . }}
       <li>
