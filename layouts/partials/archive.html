@@ -4,13 +4,12 @@
 {{ end }}
 <div class="grid-inverse wrap content">
   <div>
-    {{ if .IsHome }}
-    {{.Content}}
+    {{ if eq .IsHome false }}
+    <h1 class="page-title">{{ .Title }}</h1>
+    <p class="page-description">{{ .Description }}</p>
     {{ end }}
+    {{.Content}}
     <ul class="posts" id="posts">
-      {{ if eq .IsHome false }}
-      <h1 class="title">{{ .Title }}</h1>
-      {{ end }}
       <div class="post-feed" data-infinite-scroll='{ "path": ".next-page-btn", "append": ".post-card", "history": false, "hideNav": ".pagination-wrapper" }'>
         {{- range (.Paginate $pages).Pages }}
           {{ partial "excerpt" . }}
