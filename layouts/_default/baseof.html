@@ -9,7 +9,7 @@
     {{ $mainSassFile :=  "sass/main.sass" }}
     {{- $styles := resources.Get $mainSassFile | resources.ExecuteAsTemplate $mainSassFile . | resources.ToCSS $options }}
     {{- if (eq (getenv "HUGO_ENV") "production") -}}
-      {{- $styles = $styles | postCSS | minify | fingerprint "sha512" -}}
+      {{- $styles = $styles | minify | fingerprint "sha512" -}}
     {{- end -}}
 
     <!-- scripts definition -->
