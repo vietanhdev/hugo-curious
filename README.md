@@ -1,6 +1,6 @@
 # Hugo Curious
 
-The official theme for [AICurious Blog](https://aicurious.io) based on [Hugo Clarity](https://github.com/vietanhdev/hugo-curious). See a live demo at **[hugo-curious.aicurious.io](hugo-curious.aicurious.io)** or **[aicurious.io](https://aicurious.io)**.
+The official theme for [AICurious Blog](https://aicurious.io) based on [Hugo Clarity](https://github.com/vietanhdev/hugo-curious). See a live demo at **[hugo-curious.aicurious.io](https://hugo-curious.aicurious.io)** or **[aicurious.io](https://aicurious.io)**.
 
 ![Screenshot](images/screenshot.png)
 
