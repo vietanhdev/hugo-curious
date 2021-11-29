@@ -112,6 +112,8 @@ These options set global values that some pages or all pages in the site use by 
 | talkyardServerUrl | string | N/A |
 | talkyardScriptUrl | string | N/A |
 | contactFormSubmitUrl | string | N/A |
+| contactFormSubmitUrl | string | N/A |
+| buyMeACoffeeId | string | N/A |
 | mailChimpUrl | string | N/A |
 ### Page Parameters
 

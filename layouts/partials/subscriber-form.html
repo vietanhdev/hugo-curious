@@ -1,3 +1,4 @@
+{{- if .Site.Params.mailChimpUrl }}
 <div id="mc_embed_signup">
     <form action="{{ .Site.Params.mailChimpUrl }}"
         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
@@ -25,3 +26,4 @@
     </form>
 </div>
 <script defer type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+{{- end }}
