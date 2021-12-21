@@ -117,6 +117,10 @@ mailChimpUrl = "https://vietanhdev.us13.list-manage.com/subscribe/post?u=c5f9d88
 # Google Adsense
 # adsenseDataAdClient = ""
 
+# Cookie Consent
+showCookieConsent = true
+privacyPolicyPage = "https://aicurious.io/privacy-policy/"
+
 [related]
   includeNewer = true
   threshold = 10
