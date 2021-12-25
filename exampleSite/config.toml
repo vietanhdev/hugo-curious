@@ -3,7 +3,6 @@
 baseurl = "https://aicurious.io/"  # Include trailing slash
 title = "HugoCurious"
 author = "Viet-Anh Nguyen"
-copyright = "Copyright © 2016-2020, Viet-Anh Nguyen; all rights reserved."
 #canonifyurls = true
 paginate = 8
 PaginatePath = "/posts/"
